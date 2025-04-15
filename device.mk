@@ -317,6 +317,7 @@ PRODUCT_PACKAGES += \
     BesLoudnessOverlayDevonf \
     CarrierConfigOverlayDevonf \
     FrameworksResOverlayDevonf \
+    OpenDeltaOverlayDevonf \
     PowerOffAlarmOverlayDevonf \
     SettingsLibOverlayDevonf \
     SettingsOverlayDevonf \
