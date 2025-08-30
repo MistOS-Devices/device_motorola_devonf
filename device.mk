@@ -72,6 +72,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     BesLoudness \
+    DolbyManager \
     MtkInCallService
 
 PRODUCT_COPY_FILES += \
