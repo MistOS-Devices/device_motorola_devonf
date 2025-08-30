@@ -68,6 +68,7 @@ PRODUCT_PACKAGES += \
     audio_policy.stub \
     libalsautils \
     libopus.vendor \
+    libspatialaudio \
     audioclient-types-aidl-cpp.vendor \
 
 PRODUCT_PACKAGES += \
@@ -357,6 +358,16 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
     $(DEVICE_PATH)
+
+# Spatial Audio: optimize spatializer effect
+PRODUCT_PROPERTY_OVERRIDES += \
+       audio.spatializer.effect.util_clamp_min=300
+
+# Spatial Audio: declare use of spatial audio
+PRODUCT_PROPERTY_OVERRIDES += \
+       ro.audio.spatializer_enabled=true \
+       ro.audio.headtracking_enabled=true \
+       persist.vendor.audio.spatializer.speaker_enabled=true
 
 # Thermal
 PRODUCT_PACKAGES += \
