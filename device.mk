@@ -248,7 +248,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayDevonf \
     FrameworksResOverlayDevonf \
-    OpenDeltaOverlayDevonf \
     PowerOffAlarmOverlayDevonf \
     SettingsOverlayDevonf \
     SettingsProviderOverlayDevonf \
