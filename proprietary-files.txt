@@ -1223,6 +1223,7 @@ vendor/firmware/novatek_ts_mp.bin:recovery/root/vendor/firmware/novatek_ts_mp.bi
 
 # GPS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
+vendor/bin/lbs_hidl_service
 vendor/bin/mnld
 vendor/bin/mtk_agpsd
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_ATnT_Mexico.xml
@@ -1261,17 +1262,26 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Virgin_Mobile.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_nTelos.xml
 vendor/etc/gnss/agps_profiles_conf2.xml
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
+vendor/etc/init/lbs_hidl_service.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk-default.xml
 vendor/etc/vintf/manifest/gnss@2.1-service.xml:vendor/etc/vintf/manifest/gnss-mtk@2.1-service.xml
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
-vendor/etc/mpe.conf
+vendor/etc/MNL_Config.xml
 vendor/etc/slp_conf
+vendor/lib/libapmonitor_vendor.so
+vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
+vendor/lib64/mt6855/libDR.so;SYMLINK=vendor/lib64/libDR.so
+vendor/lib64/mt6855/libmnl.so:vendor/lib64/mt6855/libmnl-mtk.so;FIX_SONAME;DISABLE_DEPS;SYMLINK=vendor/lib64/libmnl-mtk.so
+vendor/lib64/lbs_hidl_service-impl.so
+vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
+vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
+vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
 
 # Gatekeeper
 vendor/lib64/hw/libMcGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.trustonic.so
@@ -1354,17 +1364,13 @@ system_ext/priv-app/MtkGbaService/MtkGbaService.apk
 system_ext/priv-app/MtkTelephonyAssist/MtkTelephonyAssist.apk
 
 # IMS (Vendor)
-vendor/bin/lbs_hidl_service
 vendor/bin/rcs_volte_stack
 vendor/bin/volte_rcs_ua
-vendor/etc/init/lbs_hidl_service.rc
 vendor/lib/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib/vendor.mediatek.hardware.mmagent@1.1.so
-vendor/lib64/lbs_hidl_service-impl.so
 vendor/lib64/libmmagent.so
 vendor/lib64/libmtkshifter_vendor.so
 vendor/lib64/libmtksysutils.so
-vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 
@@ -1603,7 +1609,6 @@ vendor/lib/liblog_vendor.so
 vendor/lib/libminiui.so
 vendor/lib/liboem_specific.so
 vendor/lib/libscltm.so
-vendor/lib64/mt6855/libDR.so;SYMLINK=vendor/lib64/libDR.so
 vendor/lib64/mt6855/libacdk.so;SYMLINK=vendor/lib64/libacdk.so
 vendor/lib64/mt6855/liblpcnr.so;SYMLINK=vendor/lib64/liblpcnr.so
 vendor/lib64/mt6855/libmfllcore.so;SYMLINK=vendor/lib64/libmfllcore.so
@@ -1734,7 +1739,6 @@ vendor/lib/libneuropilot_hal_utils.so
 vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib/libtflite_mtk.so;DISABLE_CHECKELF;MODULE_SUFFIX=_vendor
 vendor/lib/libvpu5.so
-vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib/vendor.mediatek.hardware.apuware.utils@2.0.so;MODULE_SUFFIX=_vendor
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.0.so
 vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.1.so
@@ -1850,7 +1854,6 @@ vendor/etc/init/mtkrild.rc
 vendor/etc/init/muxreport.rc
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
-vendor/etc/MNL_Config.xml
 vendor/etc/ecc_list.xml
 vendor/etc/ecc_list_preference.xml
 vendor/etc/mot_spn_table
@@ -1889,7 +1892,6 @@ vendor/lib/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib/vendor.mediatek.hardware.mms@1.6.so
 vendor/lib/vendor.mediatek.hardware.rcs@2.0.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so
-vendor/lib64/mt6855/libmnl.so:vendor/lib64/mt6855/libmnl-mtk.so;FIX_SONAME;DISABLE_DEPS;SYMLINK=vendor/lib64/libmnl-mtk.so
 vendor/lib64/libMtkAinrEnh.so
 vendor/lib64/libadropbox.so
 vendor/lib64/libcapctrl.so
@@ -1949,6 +1951,8 @@ vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 vendor/lib64/sensors.moto.so
 
+# Thermal
+vendor/etc/mpe.conf
 # Trusted Execution Environment (TEE)
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
 vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin
