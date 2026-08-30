@@ -39,12 +39,14 @@
     "repository": "kjdev16/hardware_google_pixel",
     "target_path": "hardware/google/pixel",
     "remote": "github",
-    "branch": "17.0"
+    "branch": "17.0",
+    "override":true
   },
   {
     "repository": "kjdev16/android_hardware_lineage_interfaces",
     "target_path": "hardware/lineage/interfaces",
     "remote": "github",
-    "branch": "lineage-24.0"
+    "branch": "lineage-24.0",
+    "override":true
   }
 ]
