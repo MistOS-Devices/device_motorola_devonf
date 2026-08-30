@@ -42,6 +42,16 @@ ro.config.per_app_memcg=false
 debug.stagefright.c2inputsurface=-1
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
+# Mist System flags
+ro.mist.display=1080 x 2400, 120 hz
+ro.mist.battery=5000mah
+ro.mist.soc=Mediatek Dimensity 930
+ro.mist.camera=50MP + 8MP
+ro.mist.front=16MP
+ro.mist.platform=Cortex A78/A55
+ro.mist.screen=6.5" IPS LCD
+ro.mist.device.name=Moto G73 5G
+
 # Motorola
 ro.mot.product_wave=2023.3
 

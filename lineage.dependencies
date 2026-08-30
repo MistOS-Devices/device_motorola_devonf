@@ -1,0 +1,50 @@
+[
+  {
+    "repository": "kjdev16/vendor_motorola_devonf",
+    "target_path": "vendor/motorola/devonf",
+    "remote": "github",
+    "branch": "seventeen"
+  },
+  {
+    "repository": "kjdev16/device_motorola_devonf-kernel",
+    "target_path": "device/motorola/devonf-kernel",
+    "remote": "github",
+    "branch": "sixteen"
+  },
+  {
+    "repository": "sreejith7676/vendor_motorola_devonf-motcamera",
+    "target_path": "vendor/motorola/devonf-motcamera",
+    "remote": "github",
+    "branch": "16"
+  },
+  {
+    "repository": "akjil98789/hardware_mediatek",
+    "target_path": "hardware/mediatek",
+    "remote": "github",
+    "branch": "seventeen"
+  },
+  {
+    "repository": "yaap/device_mediatek_sepolicy_vndr",
+    "target_path": "device/mediatek/sepolicy_vndr",
+    "remote": "github",
+    "branch": "seventeen"
+  },
+  {
+    "repository": "kjdev16/mist_new_vendor_lineage-priv",
+    "target_path": "vendor/lineage-priv",
+    "remote": "github",
+    "branch": "main"
+  },
+  {
+    "repository": "kjdev16/hardware_google_pixel",
+    "target_path": "hardware/google/pixel",
+    "remote": "github",
+    "branch": "17.0"
+  },
+  {
+    "repository": "kjdev16/android_hardware_lineage_interfaces",
+    "target_path": "hardware/lineage/interfaces",
+    "remote": "github",
+    "branch": "lineage-24.0"
+  }
+]
