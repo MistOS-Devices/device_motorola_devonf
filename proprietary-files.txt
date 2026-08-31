@@ -2024,4 +2024,4 @@ vendor/lib64/libwifitest.so
 vendor/lib64/meta_wifi_data.so
 
 # XML DOM parser
-system/lib64/libtinyxml2.so:vendor/lib64/libtinyxml2-legacy.so;FIX_SONAME|ea944fbd0e80c287581ee5e8376be4b07628dfc6|8e92250b13e2f9687b3c7cf381fa55dd5467d228
+system/lib64/libtinyxml2.so:vendor/lib64/libtinyxml2-legacy.so;FIX_SONAME
