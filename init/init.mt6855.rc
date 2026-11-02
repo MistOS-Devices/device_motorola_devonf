@@ -368,10 +368,6 @@ service factory_no_image /vendor/bin/factory
 on property:vendor.mtk.md1.status=reset
     setprop persist.vendor.atm.mdmode normal
 
-# FPSGO FBT Game
-on boot
-    insmod /vendor/lib/modules/fpsgo.ko
-
 # NFC
 on boot && property:ro.vendor.hw.nfc=true
     start vendor.nfc_hal_service
