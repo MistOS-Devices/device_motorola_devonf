@@ -9,7 +9,7 @@
     "repository": "kjdev16/device_motorola_devonf-kernel",
     "target_path": "device/motorola/devonf-kernel",
     "remote": "github",
-    "branch": "sixteen"
+    "branch": "aospa-staging"
   },
   {
     "repository": "sreejith7676/vendor_motorola_devonf-motcamera",
