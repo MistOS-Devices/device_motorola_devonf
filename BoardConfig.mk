@@ -73,6 +73,8 @@ PRODUCT_COPY_FILES += \
 
 BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
 BOARD_MKBOOTIMG_ARGS += --dtb $(BOARD_PREBUILT_DTBIMAGE_DIR)/mt6855.dtb
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
+BOARD_INCLUDE_DTBO_IN_BOOTIMG := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 
 ## vendor_boot modules
@@ -93,6 +95,7 @@ BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/modules/vendor_dlkm/*.k
 # Partitions
 AB_OTA_PARTITIONS += \
     boot \
+    dtbo \
     product \
     system \
     system_ext \
@@ -150,7 +153,7 @@ BOOT_SECURITY_PATCH := 2026-10-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # Sepolicy
-include device/mediatek/sepolicy_vndr/SEPolicy.mk
+-include device/mediatek/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
@@ -185,8 +188,8 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
 
 # Inherit the proprietary files
-include vendor/motorola/devonf/BoardConfigVendor.mk
-include vendor/motorola/devonf-motcamera/BoardConfigVendor.mk
+-include vendor/motorola/devonf/BoardConfigVendor.mk
+-include vendor/motorola/devonf-motcamera/BoardConfigVendor.mk
 
 # Wifi
 BOARD_WLAN_DEVICE := MediaTek

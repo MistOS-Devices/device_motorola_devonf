@@ -400,5 +400,8 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/motorola/devonf/devonf-vendor.mk)
-$(call inherit-product, vendor/motorola/devonf-motcamera/devonf-motcamera-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/devonf/devonf-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/devonf-motcamera/devonf-motcamera-vendor.mk)
+
+# Inherit Motorola common hardware if available
+$(call inherit-product-if-exists, hardware/motorola/common.mk)

@@ -30,30 +30,30 @@
     "branch": "seventeen"
   },
   {
-    "repository": "kjdev16/mist_new_vendor_lineage-priv_keys",
-    "target_path": "vendor/lineage-priv/keys",
-    "remote": "github",
-    "branch": "main"
-  },
-  {
     "repository": "kjdev16/hardware_google_pixel",
     "target_path": "hardware/google/pixel",
     "remote": "github",
     "branch": "17.0",
-    "override":true
+    "override": true
   },
   {
     "repository": "kjdev16/android_hardware_lineage_interfaces",
     "target_path": "hardware/lineage/interfaces",
     "remote": "github",
     "branch": "lineage-24.0",
-    "override":true
+    "override": true
   },
   {
     "repository": "kjdev16/packages_modules_Bluetooth",
     "target_path": "packages/modules/Bluetooth",
     "remote": "github",
     "branch": "17.0",
-      "override":true
+    "override": true
+  },
+  {
+    "repository": "AOSPA/android_hardware_motorola",
+    "target_path": "hardware/motorola",
+    "remote": "github",
+    "branch": "uvite"
   }
 ]
