@@ -379,7 +379,7 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget-service.mediatek
 
 # Vibrator
-$(call soong_config_set_bool,mediatek_vibrator,supports_effects,true)
+$(call soong_config_set_bool,mediatek_vibrator,supports_effects,false)
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
